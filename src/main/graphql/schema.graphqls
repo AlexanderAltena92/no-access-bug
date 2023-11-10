@@ -1,0 +1,15 @@
+type Query {
+    user: User!
+}
+
+type User {
+    id: ID!
+    name: String!
+    address: Address!
+}
+
+type Address {
+    number: Int!
+    street: String!
+    city: String!
+}
