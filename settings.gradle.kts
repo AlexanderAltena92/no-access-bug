@@ -1,8 +1,18 @@
 pluginManagement {
-  listOf(repositories, dependencyResolutionManagement.repositories).forEach {
-    it.apply {
-      mavenCentral()
-      google()
-    }
+  repositories {
+    gradlePluginPortal()
+    google()
+    mavenCentral()
   }
 }
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    google()
+    mavenCentral()
+  }
+}
+
+
+include(":mylibrary")
+include(":mylibrary2")
